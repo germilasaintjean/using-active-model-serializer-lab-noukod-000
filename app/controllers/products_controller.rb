@@ -22,13 +22,13 @@ class ProductsController < ApplicationController
     redirect_to products_path
   end
 
-  # def show
-  #   @product = Product.find(params[:id])
-  #   respond_to do |format|
-  #    format.html {render :show}
-  #    format.json {render json: @product, status: 200}
-  #  end 
-  #  end
+  def show
+    @product = Product.find(params[:id])
+    respond_to do |format|
+     format.html {render :show}
+     format.json {render json: @product, status: 200}
+   end 
+   end
 
   private
 
